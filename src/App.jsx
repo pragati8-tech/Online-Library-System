@@ -1,10 +1,7 @@
-import { BrowserRouter, Route, Routes} from "react"
+import { BrowserRouter, Route, Routes} from "react-router-dom"
 import NavBar from "./components/NavBar"
-import Home from "./pages/Home"
+import Home from "./pages/Home.jsx"
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
@@ -15,12 +12,9 @@ function App() {
       <BrowserRouter>
       <NavBar />
       <Routes>
-        
+         <Route path="/" element={<Home />} />
       </Routes>
-
       </BrowserRouter>
-
-
     </>
   )
 }

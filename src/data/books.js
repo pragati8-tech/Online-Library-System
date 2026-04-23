@@ -1,5 +1,3 @@
-// Dummy data for the online library system
-// This data will be used across multiple pages
 
 export const categories = [
   { id: 1, name: "Fiction", icon: "📖", color: "#e74c3c", slug: "fiction" },
@@ -19,7 +17,7 @@ export const books = [
     rating: 4.2,
     description:
       "A story of wealth, love, and the American Dream set in the 1920s. Nick Carraway narrates the mysterious life of his neighbor Jay Gatsby, who throws lavish parties in hopes of reuniting with his lost love, Daisy Buchanan.",
-    cover: "https://covers.openlibrary.org/b/id/8432483-L.jpg",
+    cover: "https://covers.openlibrary.org/b/id/8432483-L.jpg", 
     pages: 180,
     year: 1925,
     popular: true,
