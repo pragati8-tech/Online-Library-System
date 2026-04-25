@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx"
 import BrowseBooks from './pages/BrowseBooks'
 import BookDetails from "./pages/BookDetails";
 import { useState } from 'react'
+import AddBook from './pages/AddBook'  
 import './App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
          <Route path="/books/detail/:id" element={<BookDetails />} />
          <Route path="/books" element={<BrowseBooks />} />
          <Route path="/books/:category" element={<BrowseBooks />} />
+          <Route path="/add-book" element={<AddBook />} />
       </Routes>
       </BrowserRouter>
     </>
