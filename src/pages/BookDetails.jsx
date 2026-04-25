@@ -3,23 +3,20 @@ import { useParams, Link } from "react-router-dom";
 import { getBookById } from "../data/books";
 
 function BookDetails() {
-  const { id } = useParams(); // URL se id milega
+  const { id } = useParams(); 
   const book = getBookById(id);
 
   if (!book) {
     return <div className="p-10 text-center">Book not found ❌</div>;
   }
-
   return (
     <div className="min-h-screen bg-slate-100 p-6">
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-6">
         
-   
         <div className="flex justify-center mb-6">
           <img src={book.cover} alt={book.title} className="h-60 object-contain"/>
         </div>
 
-  
         <h1 className="text-2xl font-bold mb-2">{book.title}</h1>
         <p className="text-slate-600 mb-2">by {book.author}</p>
 

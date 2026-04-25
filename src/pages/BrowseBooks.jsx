@@ -1,10 +1,12 @@
 import { useState, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
-import { books, categories } from "../data/books";
-
+// import { books, categories } from "../data/books";
+import { useSelector } from "react-redux";
+import { categories } from "../data/books";
 function BrowseBooks() {
   const { category } = useParams();
   const [search, setSearch] = useState("");
+  const books = useSelector((state) => state.books.books);
   const activeCategory = category || "all";
   const filteredBooks = useMemo(() => {
     let result = books;
