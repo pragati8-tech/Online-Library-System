@@ -18,7 +18,7 @@ function NotFound() {
         Page Not Found
       </h2>
 
-      <p className="text-slate-400 text-base mb-2">Yeh URL exist nahi karti:</p>
+      <p className="text-slate-400 text-base mb-2">This URL doesn't exists:</p>
       <div className="bg-slate-800 border border-slate-600 rounded-xl px-6 py-3 mb-8">
         <code className="text-red-400 font-mono text-base font-semibold">
           {location.pathname}

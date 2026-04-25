@@ -1,16 +1,95 @@
-# React + Vite
+# 📚 LibrarySystem — Online Library App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based online library system where users can browse, search, and add books.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
 
-## React Compiler
+- **React** — UI Library
+- **Vite** — Project Setup
+- **React Router DOM** — Page Routing
+- **Redux Toolkit** — State Management
+- **Tailwind CSS** — Styling
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+├── store/
+│   ├── store.js            # Redux store
+│   └── booksSlice.js       # Books state + actions
+├── components/
+│   └── Navbar.jsx          # Navigation bar
+├── pages/
+│   ├── Home.jsx            # Landing page
+│   ├── BrowseBooks.jsx     # Browse + filter + search
+│   ├── BookDetails.jsx     # Single book detail
+│   ├── AddBook.jsx         # Add new book form
+│   └── NotFound.jsx        # 404 page
+├── data/
+│   └── books.js            # Dummy books data
+├── App.jsx                 # Routes setup
+└── main.jsx                # Entry point
+
+---
+
+## ⚙️ How to Run
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/pragati8-tech/Online-Library-System
+```
+
+### 2. Go to the Project folder 
+
+```bash
+cd Online-Library-System
+```
+
+### 3. install Dependencies
+
+```bash
+npm install
+```
+
+### 4. start Development server 
+
+```bash
+npm run dev
+```
+
+### 5. Browser mein open karo
+http://localhost:5173
+---
+
+## 📄 Pages
+
+| Page | Route | Description |
+|---|---|---|
+| Home | `/` | Welcome page, categories, popular books |
+| Browse Books | `/books` | All books with search and filter |
+| Browse by Category | `/books/:category` | Filter books by category |
+| Book Details | `/books/detail/:id` | Single book full detail |
+| Add Book | `/add-book` | Form to add new book |
+| 404 | `*` | Page not found |
+
+---
+
+## ✨ Features
+
+- Browse books by category
+- Search books by title or author
+- View detailed info of any book
+- Add new book with form validation
+- Redux state management
+- 404 page for invalid routes
+
+---
+
+## 👤 Author
+
+**Pragati Agrawal**  
+GitHub: [pragati8-tech](https://github.com/pragati8-tech/Online-Library-System)
