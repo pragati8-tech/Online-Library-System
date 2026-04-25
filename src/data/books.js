@@ -1,4 +1,4 @@
-
+// 📚 Categories used across the app (for filters, dropdowns, UI)
 export const categories = [
   { id: 1, name: "Fiction", icon: "📖", color: "#e74c3c", slug: "fiction" },
   { id: 2, name: "Non-Fiction", icon: "📰", color: "#2980b9", slug: "non-fiction" },
@@ -7,7 +7,7 @@ export const categories = [
   { id: 5, name: "Biography", icon: "👤", color: "#e67e22", slug: "biography" },
   { id: 6, name: "Fantasy", icon: "🧙", color: "#16a085", slug: "fantasy" },
 ];
-
+// 📚 Static book data (mock data for UI and development)
 export const books = [
   {
     id: 1,

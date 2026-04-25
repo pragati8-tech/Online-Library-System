@@ -8,13 +8,15 @@ function BrowseBooks() {
   const [search, setSearch] = useState("");
   const books = useSelector((state) => state.books.books);
   const activeCategory = category || "all";
+  
+  // 🔹 Memoized filtering (performance optimization)
   const filteredBooks = useMemo(() => {
     let result = books;
 
     if (activeCategory !== "all") {
       result = result.filter((book) => book.category === activeCategory);
     }
-
+    // filter by search (title or author)
     if (search.trim() !== "") {
       const query = search.toLowerCase();
       result = result.filter(
@@ -54,6 +56,7 @@ function BrowseBooks() {
             className="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-slate-200 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:border-amber-400 transition-colors duration-200 text-sm"
           />
         </div>
+        {/* 🔹 Category filters */}
         <div className="flex flex-wrap gap-2 mb-8">
           <Link
             to="/books"
@@ -96,6 +99,7 @@ function BrowseBooks() {
             <p className="text-sm">Try a different search or category</p>
           </div>
         ) : (
+          // 🔹 Book grid
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             {filteredBooks.map((book) => (
               <div

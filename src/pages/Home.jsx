@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { categories, popularBooks } from "../data/books";
 
+// 🔹 Reusable component to display book rating
 const StarRating = ({ rating }) => {
   return (
     <div className="flex items-center gap-1">
@@ -13,7 +14,9 @@ function Home() {
   return (
     <>
       <div className="bg-slate-100 min-h-screen">
+        {/* 🔹 Hero section (intro + CTA) */}
         <section className="bg-slate-900 text-white py-20 px-6 text-center relative overflow-hidden">
+          {/* 🔹 Background decorative icon */}
           <div className="absolute inset-0 opacity-5 text-[20rem] flex items-center justify-center pointer-events-none select-none">
             📚
           </div>
@@ -49,6 +52,7 @@ function Home() {
               Pick a genre you love and dive right in
             </p>
 
+            {/* 🔹 Category grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
               {categories.map((cat) => (
                 <Link
@@ -65,6 +69,8 @@ function Home() {
             </div>
           </div>
         </section>
+
+        {/* 🔹 Popular books section */}
         <section className="py-14 px-6">
           <div className="max-w-5xl mx-auto">
             <h2 className="font-serif text-3xl font-bold text-slate-900 mb-1">
@@ -74,6 +80,7 @@ function Home() {
               Highly rated picks loved by our readers
             </p>
 
+            {/* 🔹 Book grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
               {popularBooks.map((book) => (
                 <div

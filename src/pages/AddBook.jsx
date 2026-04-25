@@ -7,8 +7,8 @@ import { categories } from "../data/books";
 
 function AddBook() {
 
-  const dispatch = useDispatch();   
-  const navigate = useNavigate();  
+  const dispatch = useDispatch();   // Dispatch actions to Redux store
+  const navigate = useNavigate();   // Navigate programmatically
 
   // ── Form state 
   const [formData, setFormData] = useState({
